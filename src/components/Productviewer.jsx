@@ -6,9 +6,14 @@ import { OrbitControls, Box, PerspectiveCamera } from '@react-three/drei'
 import { MacbookModel14 } from "./models/Macbook-14";
 import StudioLights from "./StudioLights";
 
+import SwitchingModel from "./gsap/SwitchingModel";
+import MediaQuery from "react-responsive";
+
 const Productviewer = () => {
     const {color, setColor, scale, setScale}=useMacbookStore();
-  return (
+
+    const isMobile = MediaQuery({query:'max-w : 1024px'})
+    return (
     <section id="product-viewer">
         <h2>Take a Closer Look</h2>
         <div className="controls">
@@ -56,6 +61,7 @@ const Productviewer = () => {
 
   {/* Helps you move around to find objects */}
   <OrbitControls enableZoom={false}/>
+  <SwitchingModel scale={isMobile ? scale-0.03 : scale} isMobile={isMobile}/>
 </Canvas>
     </section>
   )
