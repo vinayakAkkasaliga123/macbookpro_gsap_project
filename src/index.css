@@ -30,7 +30,7 @@
     #0894ff 0%,
     #c959dd 34%,
     #ff2e54 68%,
-    #ff9004
+    #ff9004,
   );
 }
 
@@ -49,6 +49,9 @@ html {
   width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -57,6 +60,9 @@ body {
   background-color: #000;
   color: var(--color-dark-100);
   font-family: var(--font-semibold);
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 @utility flex-center {

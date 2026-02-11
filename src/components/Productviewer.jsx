@@ -2,6 +2,10 @@ import clsx from "clsx";
 import useMacbookStore from "../store"
 import { Canvas } from "@react-three/fiber";
 
+import { OrbitControls, Box, PerspectiveCamera } from '@react-three/drei'
+import { MacbookModel14 } from "./models/Macbook-14";
+import StudioLights from "./StudioLights";
+
 const Productviewer = () => {
     const {color, setColor, scale, setScale}=useMacbookStore();
   return (
@@ -38,13 +42,21 @@ const Productviewer = () => {
                 </div>
             
         </div> 
-        <Canvas>
-            <ambientLight intensity={0.5} /> {/* Added light so you can see it */}
-              <mesh position={[-1, 1, 4]} scale={10*scale}>
-                 <boxGeometry args={[1, 1, 1]} /> {/* This defines the box shape */}
-                 <meshStandardMaterial color={color} /> {/* This uses your Zustand color */}
-              </mesh>
-        </Canvas>
+       <Canvas id="canvas" camera={{ position: [0, 2, 5], fov: 50, near:0.1, far:100 }}>
+  {/* Add a background color to the scene to see if it's working */}
+  
+  
+  {/* Standard Lighting */}
+  
+ 
+
+  {/* The Cube - centered at 0,0,0 */}
+  <MacbookModel14 scale={0.06} position={[0,0,0]}/>
+  <StudioLights/>
+
+  {/* Helps you move around to find objects */}
+  <OrbitControls enableZoom={false}/>
+</Canvas>
     </section>
   )
 }
