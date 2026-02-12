@@ -56,7 +56,7 @@ const Productviewer = () => {
  
 
   {/* The Cube - centered at 0,0,0 */}
-  <MacbookModel14 scale={0.06} position={[0,0,0]}/>
+  
   <StudioLights/>
 
   {/* Helps you move around to find objects */}
