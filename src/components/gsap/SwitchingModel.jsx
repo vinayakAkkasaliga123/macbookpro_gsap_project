@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
 const ANIMATION_TIMELINE = 1;
-const OFFSET_DISTANCE = 5;
+const OFFSET_DISTANCE = 7;
 
 const fadingmesh = (group, opacity)=>{
   if(!group) return;
@@ -33,6 +33,7 @@ const SwitchingModel = ({scale, isMobile}) => {
 
   useGSAP(() => {
   if (showLargeMacbook) {
+
     // --- HIDE THE 14" (Mini) ---
     movingGroup(miniMacbookReference.current, -OFFSET_DISTANCE);
     fadingmesh(miniMacbookReference.current, 0);
