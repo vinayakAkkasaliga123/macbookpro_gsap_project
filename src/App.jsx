@@ -16,7 +16,7 @@ const App = () => {
       <Hero/>
       <Productviewer/>
       <Gaming_section/>
-      <Performance_Section/>
+      
     </div>
   );
 }
