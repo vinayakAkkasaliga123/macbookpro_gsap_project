@@ -9,8 +9,8 @@ const Hero = () => {
         if(videoRef.current) videoRef.current.playbackRate=2;
     },[])
   return (
-    <section id='hero'>
-        <div >
+    <section id='hero' className='mt-20'>
+        <div  >
             <h1>Macbook Pro</h1>
             <img src="/title.png" alt="Title" />
         </div>
