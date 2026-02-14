@@ -195,8 +195,7 @@ body {
 
         img {
           @apply h-full scale-150 lg:scale-100;
-          transform: matrix(80, 0, 0, 80, 0, 0);
-        }
+          transform:scale(1)        }
 
         @media (max-width: 1024px) {
           img {
